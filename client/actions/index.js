@@ -1,20 +1,28 @@
 import { getFruits } from '../apis/fruits'
 
 export const SET_FRUITS = 'SET_FRUITS'
+export const RECEIVE_USER_ROUTINE = 'RECEIVE_USER_ROUTINE'
 
-export function setFruits (fruits) {
+export const receiveUserRoutine = (task) => {
   return {
-    type: SET_FRUITS,
-    fruits
+    type: RECEIVE_USER_ROUTINE,
+    task: task
   }
 }
 
-export function fetchFruits () {
-  return dispatch => {
-    return getFruits()
-      .then(fruits => {
-        dispatch(setFruits(fruits))
-        return null
-      })
-  }
-}
+// export function setFruits (fruits) {
+//   return {
+//     type: SET_FRUITS,
+//     fruits
+//   }
+// }
+
+// export function fetchFruits () {
+//   return dispatch => {
+//     return getFruits()
+//       .then(fruits => {
+//         dispatch(setFruits(fruits))
+//         return null
+//       })
+//   }
+// }

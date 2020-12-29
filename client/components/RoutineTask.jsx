@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 class RoutineTask extends React.Component {
   render () {
+    console.log(this.props)
     return (
       <li>
         <h4>{this.props.task.task}</h4>

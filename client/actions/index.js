@@ -1,12 +1,21 @@
 import { getFruits } from '../apis/fruits'
+import { getRoutine } from '../apis/index'
 
 export const SET_FRUITS = 'SET_FRUITS'
-export const RECEIVE_USER_ROUTINE = 'RECEIVE_USER_ROUTINE'
+export const GET_ROUTINE = 'GET_ROUTINE'
 
-export const receiveUserRoutine = (task) => {
+export function getRoutines (routine) {
   return {
-    type: RECEIVE_USER_ROUTINE,
-    task: task
+    type: GET_ROUTINE,
+    routine
+  }
+}
+
+export function receiveUserRoutine () {
+  return dispatch => {
+    getRoutine()
+      .then(routine => dispatch(getRoutines(routine)))
+      // .catch(err => dispatch(setError(err)))
   }
 }
 

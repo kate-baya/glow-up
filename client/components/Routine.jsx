@@ -1,15 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { receiveUserRoutine } from '../actions/index'
+import { dispatchUserRoutine } from '../actions/index'
 
 import RoutineTask from './RoutineTask'
 
 class Routine extends React.Component {
   componentDidMount () {
-    // getRoutine(this.props.disptach) //problem is here
-    // console.log("routine.jsx, props, line 12 -", this.props)
-    this.props.dispatch(receiveUserRoutine())
+    this.props.dispatch(dispatchUserRoutine())
   }
 
   render () {
@@ -27,7 +25,6 @@ class Routine extends React.Component {
 }
 
 const mapStateToProps = ({ routine }) => {
-  console.log('routine.jsx line 29')
   return {
     routine
   }

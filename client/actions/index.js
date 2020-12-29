@@ -1,36 +1,19 @@
-import { getRoutine } from '../apis/index'
+import { fetchRoutine } from '../apis/index'
 
-export const SET_FRUITS = 'SET_FRUITS'
-export const GET_ROUTINE = 'GET_ROUTINE'
+export const RECEIVE_ROUTINE = 'GET_ROUTINE'
 
-export function getRoutines (routine) {
+export function receiveRoutine (routine) {
   return {
-    type: GET_ROUTINE,
+    type: RECEIVE_ROUTINE,
     routine
   }
 }
 
-export function receiveUserRoutine () {
+//this is where the info fetched from fetchRoutine is dispatched with the received info from receiveRoutine to the store
+export function dispatchUserRoutine () {
   return dispatch => {
-    getRoutine()
-      .then(routine => dispatch(getRoutines(routine)))
+    fetchRoutine()
+      .then(routine => dispatch(receiveRoutine(routine)))
       .catch(err => dispatch(setError(err)))
   }
 }
-
-// export function setFruits (fruits) {
-//   return {
-//     type: SET_FRUITS,
-//     fruits
-//   }
-// }
-
-// export function fetchFruits () {
-//   return dispatch => {
-//     return getFruits()
-//       .then(fruits => {
-//         dispatch(setFruits(fruits))
-//         return null
-//       })
-//   }
-// }

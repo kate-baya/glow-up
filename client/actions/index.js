@@ -1,4 +1,3 @@
-import { getFruits } from '../apis/fruits'
 import { getRoutine } from '../apis/index'
 
 export const SET_FRUITS = 'SET_FRUITS'
@@ -15,7 +14,7 @@ export function receiveUserRoutine () {
   return dispatch => {
     getRoutine()
       .then(routine => dispatch(getRoutines(routine)))
-      // .catch(err => dispatch(setError(err)))
+      .catch(err => dispatch(setError(err)))
   }
 }
 

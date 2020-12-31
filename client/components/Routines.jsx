@@ -1,14 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { dispatchUserRoutine } from '../actions/index'
-
 import RoutineTask from './DailyRoutine'
 
-class Routine extends React.Component {
-  componentDidMount () {
-    this.props.dispatch(dispatchUserRoutine())
-  }
+class Routines extends React.Component {
 
   render () {
     return (
@@ -24,10 +19,4 @@ class Routine extends React.Component {
   }
 }
 
-const mapStateToProps = ({ routine }) => {
-  return {
-    routine
-  }
-}
-
-export default connect(mapStateToProps)(Routine)
+export default connect()(Routines)

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { dispatchUserRoutine } from '../actions/index'
 
-import RoutineTask from './RoutineTask'
+import RoutineTask from './DailyRoutine'
 
 class Routine extends React.Component {
   componentDidMount () {

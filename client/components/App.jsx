@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Routine from './Routine'
+import Routine from './Routines'
 
 export default class App extends React.Component {
   render () {

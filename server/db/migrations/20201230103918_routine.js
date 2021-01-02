@@ -1,6 +1,8 @@
 exports.up = function (knex) {
   return knex.schema.createTable('routine', table => {
     table.increments('id')
+    table.string('date')
+    table.string('day')
     table.string('time')
     table.string('task')
     table.string('importance')

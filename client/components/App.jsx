@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { dispatchUserRoutine } from '../actions/index'
 
 import Routines from './Routines'
+import CreateRoutine from './CreateRoutine'
 
 class App extends React.Component {
 
@@ -17,6 +18,7 @@ class App extends React.Component {
       <>
         <div className='app'>
           <h1>Glow Up</h1>
+          <CreateRoutine />
           <Routines routine={routine}/>
         </div>
       </>

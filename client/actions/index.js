@@ -1,4 +1,4 @@
-import { fetchRoutine } from '../apis/index'
+import { fetchRoutines } from '../apis/index'
 
 export const RECEIVE_ROUTINE = 'GET_ROUTINE'
 
@@ -12,7 +12,7 @@ export function receiveRoutine (routine) {
 //this is where the info fetched from fetchRoutine is dispatched with the received info from receiveRoutine to the store
 export function dispatchUserRoutine () {
   return dispatch => {
-    fetchRoutine()
+    fetchRoutines()
       .then(routine => dispatch(receiveRoutine(routine)))
       .catch(err => dispatch(setError(err)))
   }

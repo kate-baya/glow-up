@@ -4,8 +4,8 @@ const db = require('../db/routine')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  db.getRoutine()
+router.get('/monday', (req, res) => {
+  db.getMondayRoutine()
     .then(task => {
       res.json(task)
       return null
@@ -14,4 +14,5 @@ router.get('/', (req, res) => {
       res.status(500).send(err.message)
     })
 })
+
 module.exports = router

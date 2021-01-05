@@ -6,6 +6,7 @@ class RoutineTask extends React.Component {
     return (
       <li>
         <h4>{this.props.task.task}</h4>
+        <p>{this.props.task.day}</p>
         <p>{this.props.task.time}</p>
       </li>
     )

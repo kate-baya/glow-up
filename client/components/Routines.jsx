@@ -22,8 +22,6 @@ class Routines extends React.Component {
     const dailyRoutine = this.props.routine
     return (
       <div>
-        {console.log(this.props)}
-        {console.log(dailyRoutine)}
         <h2>Daily Routine</h2>
         <p><a href="#" onClick={this.add}>Add Routine</a></p>
         {this.state.addRoutine && <CreateRoutine dailyRoutine={dailyRoutine}/>}

@@ -1,29 +1,3 @@
-# Fullstack boilerplate
+Glow-Up is a new project I am slowly working on in my spare time. This project stemmed from my desire to create and stick to some kind of routine and motivation to better myself. This project has a broad scope, but is currently in the process of developing a CRUD framework for keeping a daily routine based on the average work week. 
 
-## Getting Started
-
-### From the Github UI
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-### From the command line
-
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000).
-
-## Details
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
+I will be expanding on this site and am looking at recreating this site using React Native in the future. 
